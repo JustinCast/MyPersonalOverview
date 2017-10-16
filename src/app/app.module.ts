@@ -11,6 +11,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorHandleComponent } from './error-handle/error-handle.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { ProjectsComponent } from './projects/projects.component';
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
