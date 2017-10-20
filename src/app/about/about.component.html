@@ -1,11 +1,27 @@
-<div class="card">
-  <a href="">
-    <img src="../../assets/ic_gmail.svg" alt="Correo Gmail">
-  </a>
-  <a href="">
-    <img src="../../assets/ic_linkedin.svg" alt="Linkedin">
-  </a>
-  <a href="https://www.github.com/JustinCast/overview">
-    <img src="../../assets/ic_github.svg" alt="Github">
-  </a>
+<h1 id="about-title" class="title">I have experience with</h1>
+<ul id="languages-container">
+  <li *ngFor="let g of languages" class="languages-li animated pulse infinite">{{g}}</li>
+</ul>
+<ul id="links-list">
+  <li class="links">
+    <a href="">
+        <img src="../../assets/ic_gmail.svg" alt="Correo Gmail">
+      </a>
+  </li>
+  <li class="links">
+    <a href="">
+        <img src="../../assets/ic_linkedin.svg" alt="Linkedin">
+      </a>
+  </li>
+  <li class="links">
+    <a href="https://www.github.com/JustinCast">
+      <img src="../../assets/ic_github.svg" alt="Github">
+    </a>
+  </li>
+</ul>
+
+<div id="sendme-container" class="card">
+  <button class="btn btn-danger waves-light">Send me an email using gmail</button>
+  <button class="btn btn-primary waves-light">Contact me using Linkedin</button>
+  <button class="btn btn-blue-grey">Send me your email to contact</button>
 </div>

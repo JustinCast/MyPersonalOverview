@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  languages: Array<String>
   constructor() { }
 
   ngOnInit() {
+    this.languages = new Array()
+    this.languages.unshift('Angular', 'Nodejs', 'Webpack', 'MongoDB', 'TypeScript')
   }
 
 }

@@ -1,19 +1,72 @@
-<div id="principal-information-card" class="card">
+<div style="margin: auto;">  
+  <!-- <div class="left-container-data">
+    <p class="animated swing infinite">Angular</p>
+    <p class="animated bounceIn infinite">Nodejs</p>
+    <p class="animated bounceInRight infinite">MongoDB</p>
+    <p class="animated bounceInUp infinite">TypeScript</p>
+  </div> -->
+  <div id="principal-information-card" class="card">
   
-      <!--Card image-->
-      <img class="img-fluid" src="../../assets/edited.png" alt="Card image cap"> 
-
-      <!--Card content-->
-      <div id="card-body" class="card-body">
-          <!--Title-->
-          <h4 class="card-title">Justin Alberto Castillo V.</h4>
-          <!--Text-->
-          <p class="card-text">
-            Web & Mobile Developer at Comunidad de Móviles TEC SC
-          <br> Computer Engineering Student
-          </p>
-
-          <button class="btn btn-primary btn-sm" [routerLink]="['/projects']">Go to My Projects</button>
-      </div>
+        <a class="navbar-brand">Justin's Overview</a>
+        <!--Card image-->
+        <img class="img-fluid" src="../../assets/edited.png" alt="Card image cap">
+  
+        <!--Card content-->
+        <div id="card-body" class="card-body">
+            <!--Title-->
+            <h4 class="card-title">Justin Alberto Castillo V.</h4>
+            <!--Text-->
+            <p class="card-text">
+              Web & Mobile Developer at Comunidad de Móviles TEC SC
+            <br> Computer Engineering Student
+            </p>
+  
+            <button id="go-projects" class="btn btn-sm" [routerLink]="['/projects']">Go to My Projects</button>
+        </div>
   
   </div>
+  <!-- <div style="width: 25%">
+      <p class="animated swing infinite">Angular</p>
+      <p class="animated bounceIn infinite">Nodejs</p>
+      <p class="animated bounceInRight infinite">MongoDB</p>
+      <p class="animated bounceInUp infinite">TypeScript</p>
+  </div> -->
+</div>
+
+
+
+  <!--Footer-->
+<footer class="page-footer center-on-small-only">
+      <!--Footer Links-->
+      <div class="container">
+          <div class="row">
+
+              <!--First column-->
+              <div class="col-md-6">
+                  <h5 class="title">About me</h5>
+                  <p>More info go: <a [routerLink]="['/about']" style="text-decoration: underline">About</a></p>
+              </div>
+              <!--/.First column-->
+
+              <!--Second column-->
+              <div class="col-md-6">
+                  <h5 class="title">Conctact me here</h5>
+                  <ul>
+                      <li><a href="https://github.com/JustinCast">Github</a></li>
+                      <li><a href="https://www.linkedin.com/in/justin-alberto-castillo-valladares-82723a121">Linkedin</a></li>
+                  </ul>
+              </div>
+              <!--/.Second column-->
+          </div>
+      </div>
+      <!--/.Footer Links-->
+
+      <!--Copyright-->
+      <div class="footer-copyright">
+          <div class="container-fluid">
+              © 2017 Copyright: <a href="#"> Justin Alberto Castillo Valladares </a>
+          </div>
+      </div>
+      <!--/.Copyright-->
+</footer>
+  <!--/.Footer-->

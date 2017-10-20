@@ -8,7 +8,35 @@ div.card{
     width: 50%;
     margin-top: 2%;
 }
-a{
-    width: 10%;
+#links-list{
     margin: auto;
+    width: 50%;
+    margin-left: 25%;
+    display: inline-block;
+    text-align: center
+}
+.links{
+    width: 5%;
+    display: inline-block
+}
+#languages-container{
+    display: flex;
+    justify-content: center;
+    margin: auto
+}
+.languages-li{
+    list-style-type: none;
+    font-size: 25px;
+    margin-left: 1%
+}
+#about-title{
+    text-align: center; 
+    margin: auto; 
+    margin-top: 10%;
+    color: #311B92;
+    padding: 0;
+}
+#sendme-container{
+    text-align: center;
+    width: 40%
 }

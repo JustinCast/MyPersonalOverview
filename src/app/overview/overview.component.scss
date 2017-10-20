@@ -1,7 +1,7 @@
 #principal-information-card{
-    width: 40%;
+    width: 30%;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 1.5%;
     border-radius: 10px;
 }
 #card-body{
@@ -9,7 +9,29 @@
 }
 img{
     width: 50%;
-    height: 50%;
+    height: 50%;    
     margin: auto;
     border-radius: 10px
+}
+#go-projects{
+    background-color: #311B92
+}
+footer{
+    background-color: #212121;
+    font-size: 12px;
+}
+a{
+    margin: auto
+}
+.left-container-data{
+    width: 15%; 
+    float: left;
+    text-align: center;
+    margin-top: 2%
+}
+.right-container-data{
+    width: 15%;
+    float: left;
+    text-align: center;
+    margin-top: 2%;
 }
