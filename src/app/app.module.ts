@@ -12,13 +12,15 @@ import { AboutComponent } from './about/about.component';
 import { ErrorHandleComponent } from './error-handle/error-handle.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from "@angular/common/http";
+import { PortfolioComponent } from './portfolio/portfolio.component';
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     AboutComponent,
     ErrorHandleComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

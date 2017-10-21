@@ -1,0 +1,104 @@
+<div id="portfolio-card" class="card">
+  <p id="portfolio-title" class="title">Justin Alberto Castillo Valladares</p>
+  <p class="positioning-paragraphs">Actual professional status: Computer Engineer student at TEC</p>
+  <p class="positioning-paragraphs">Student email: juscastillo@estudiantec.cr</p>
+  <p class="positioning-paragraphs">Age: 21</p>
+  <p class="positioning-paragraphs">Email: justincastillovalladares@gmail.com</p>
+  <p class="positioning-paragraphs">Repository: <a href="https://github.com/JustinCast">github.com/JustinCast</a></p>
+  
+  <div id="experience-collapse" class="positioning-paragraphs">
+    Experience 
+    <button id="btn-extra-courses" class="btn waves-light btn-sm" type="button" (click)="experience.toggle()" mdbRippleRadius>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
+    
+    <ul [mdbCollapse]="isCollapsed" #experience="bs-collapse">
+      <li class="extra-courses-paragraph">Angular<span class="badge badge-primary badge-pill">2016</span> -<span class="badge badge-primary badge-pill">2018</span></li>
+      <li class="extra-courses-paragraph">TypeScript<span class="badge badge-primary badge-pill">2016</span> -<span class="badge badge-primary badge-pill">2018</span></li>
+      <li class="extra-courses-paragraph">Nodejs & Expresss<span class="badge badge-primary badge-pill">2016</span> -<span class="badge badge-primary badge-pill">2018</span></li>
+      <li class="extra-courses-paragraph">Java<span class="badge badge-primary badge-pill">2016</span> -<span class="badge badge-primary badge-pill">2018</span></li>
+      <li class="extra-courses-paragraph">HTML & CSS<span class="badge badge-primary badge-pill">2016</span> -<span class="badge badge-primary badge-pill">2018</span></li>
+      <li class="extra-courses-paragraph">SASS<span class="badge badge-primary badge-pill">Starting 2017</span></li>
+    </ul>
+  </div>
+  <div id="extra-courses-collapse" class="positioning-paragraphs">
+    Extra courses & complementary   
+    <button id="btn-extra-courses" class="btn waves-light btn-sm" type="button" (click)="test.toggle()" mdbRippleRadius>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
+    
+    <ul [mdbCollapse]="isCollapsed" #test="bs-collapse">
+      <li class="extra-courses-paragraph">Bachillerato de Segundo Ciclo<span class="badge badge-primary badge-pill">2015</span></li>
+      <li class="extra-courses-paragraph">Técnico medio en Banca y Finanzas<span class="badge badge-primary badge-pill">2015</span></li>
+      <li class="extra-courses-paragraph">Taller sobre seguridad de los billetes costarricenses<span class="badge badge-primary badge-pill">2014</span></li>
+      <li class="extra-courses-paragraph">Taller sobre legitimación de capitales<span class="badge badge-primary badge-pill">2015</span></li>
+    </ul>
+  </div>
+  <div id="reviews" class="positioning-paragraphs">
+    Reviews   
+    <button id="btn-extra-courses" class="btn waves-light btn-sm" type="button" (click)="reviews.toggle()" mdbRippleRadius>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
+    
+    <div [mdbCollapse]="isCollapsed" #reviews="bs-collapse">
+       <!--First review-->
+    <div class="media mb-1">
+        <!-- <a class="media-left waves-light">
+            <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg" alt="Generic placeholder image">
+        </a> -->
+        <div class="media-body">
+            <h4 class="media-heading">Diego Rojas Vega</h4>
+            <ul class="rating inline-ul">
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+            </ul>
+            <p>He made awesome algorithms!</p>
+        </div>
+    </div>
+
+    <!--Second review-->
+    <div class="media mb-1">
+        <!-- <a class="media-left waves-light">
+            <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Generic placeholder image">
+        </a> -->
+        <div class="media-body">
+            <h4 class="media-heading">Miguel Rivas Méndez</h4>
+            <ul class="rating inline-ul">
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+            </ul>
+            <p>Good enterpreneur</p>
+          </div>
+    </div>
+
+    <!--Second review-->
+    <div class="media mb-1">
+        <!-- <a class="media-left waves-light">
+            <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image">
+        </a> -->
+        <div class="media-body">
+            <h4 class="media-heading">Jafeth Suárez</h4>
+            <ul class="rating inline-ul">
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+                <li><i class="fa fa-star amber-text"></i></li>
+            </ul>
+            <p>Excelent student</p>
+        </div>
+    </div>                
+    </div>
+  </div>
+
+  <div style="text-align: center">
+    <button id="hire-me-btn" class="btn btn-sm">Hire Me</button>
+  </div>
+  
+</div>

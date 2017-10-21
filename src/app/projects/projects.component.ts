@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  private repos: Array<any> = []
+  repos: Array<any> = []
   link: string  
   constructor(private _http: HttpClient) { }
 
