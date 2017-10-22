@@ -6,7 +6,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit, OnDestroy {
-  
+  isCollapsed
   constructor() { }
   
   ngOnInit() {
