@@ -8,7 +8,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod",
+    "start": "node Server.js"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +26,7 @@
     "angular-bootstrap-md": "^4.3.7",
     "animate.css": "^3.5.2",
     "core-js": "^2.4.1",
+    "express": "^4.16.2",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
