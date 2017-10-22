@@ -1,11 +1,13 @@
 ul{
-    display: inline-block;
-    width: 85%
+    width: 90%;
+    margin: auto
 }
-li{
-    display: inline-block;
-    width: 100%;
-    cursor: pointer
+#project-li{
+    width: 90%;
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    margin-top: 1%
 }
 #private-repos{
     text-align: center;
