@@ -3,8 +3,8 @@
     <small>Contact me if you want to see some</small>
 </p>
 
-<ul id="projects-ul" *ngFor="let r of repos">
-  <li id="project-li" class="card"> 
+<ul id="projects-ul">
+  <li class="project-li" class="card" *ngFor="let r of repos"> 
       <div class="card-body">
           <!--Title-->
           <h6 class="card-title">{{r.name}}</h6>

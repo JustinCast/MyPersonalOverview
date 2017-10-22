@@ -1,13 +1,16 @@
 #projects-ul{
     width: 90%;
-    text-align: center
+    text-align: center;
+    margin: auto;
+    padding: 0
 }
-#project-li{
+.project-li{
+    list-style-type: none;
+    margin-left: 0;
     width: 100%;
     cursor: pointer;
-    margin: auto;
     text-align: center;
-    margin-top: 1%
+    margin-top: 1%;
 }
 #private-repos{
     text-align: center;
