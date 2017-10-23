@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FancyPreloaderTypes } from 'ngx-fancy-preloader';
+// import { FancyPreloaderTypes } from 'ngx-fancy-preloader';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -10,7 +10,7 @@ export class ProjectsComponent implements OnInit {
   repos: Array<any> = []
   link: string  
   loading: boolean
-  type: string = FancyPreloaderTypes.EVIL_NORMAL
+  // type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient) { }
 
   ngOnInit() {
