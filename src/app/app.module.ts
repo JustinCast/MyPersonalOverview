@@ -13,6 +13,7 @@ import { ErrorHandleComponent } from './error-handle/error-handle.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import {NgxFancyPreloaderModule } from 'ngx-fancy-preloader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    NgxFancyPreloaderModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],

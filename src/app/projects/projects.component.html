@@ -2,7 +2,7 @@
     Private repositories may not appear <br>
     <small>Contact me if you want to see some</small>
 </p>
-
+<fancy-preloader [loading]="!loading" [type]="type"></fancy-preloader>
 <ul id="projects-ul">
   <li class="card project-li" *ngFor="let r of repos"> 
       <div class="card-body">
@@ -10,7 +10,7 @@
           <h6 class="card-title">{{r.name}}</h6>
           <!--Text-->
           <p class="card-text">{{r.description}}</p>
-          <button (click)="redirect(index)" class="btn btn-primary btn-sm">Ir</button>
+          <button (click)="redirect(index)" class="btn btn-sm btn-go">Go</button>
       </div>
   </li>
 </ul>
