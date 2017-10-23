@@ -10,7 +10,7 @@ export class ProjectsComponent implements OnInit {
   repos: Array<any> = []
   link: string  
   loading: boolean
-  type: string = FancyPreloaderTypes.CIRCLE_SIMPLE
+  type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient) { }
 
   ngOnInit() {
