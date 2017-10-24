@@ -13,6 +13,7 @@ import { ErrorHandleComponent } from './error-handle/error-handle.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { GistsComponent } from './gists/gists.component';
 // import {NgxFancyPreloaderModule } from 'ngx-fancy-preloader';
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     AboutComponent,
     ErrorHandleComponent,
     ProjectsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    GistsComponent
   ],
   imports: [
     BrowserModule,

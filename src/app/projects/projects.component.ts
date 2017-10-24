@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
             if(data.hasOwnProperty(key)){
               this.repos.push(data[key]);
             }
-           }
+          }
         },
         err =>{
           console.log(err)

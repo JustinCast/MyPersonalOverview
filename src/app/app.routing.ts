@@ -4,6 +4,7 @@ import { AboutComponent } from "./about/about.component";
 import { ErrorHandleComponent } from "./error-handle/error-handle.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { GistsComponent } from "./gists/gists.component";
 
 
 export const ROUTES: Routes = [
@@ -26,6 +27,10 @@ export const ROUTES: Routes = [
     {
         path: 'portfolio',
         component: PortfolioComponent
+    },
+    {
+        path: 'gists',
+        component: GistsComponent
     },
     {
         path: '',

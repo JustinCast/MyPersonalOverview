@@ -1,0 +1,11 @@
+<ul id="gists-ul">
+  <li *ngFor="let g of gists; let index = index" class="card gists-li">
+    <div class="card-body">
+      <h6>{{g.description}}</h6>        
+      <ul id="footer-ul">          
+        <li><i class="fa fa-comment-o" aria-hidden="true"></i>{{g.comments}}</li>
+        <li><i class="fa fa-calendar-o" aria-hidden="true"></i>{{g.created_at | date}}</li>
+      </ul>
+    </div>
+  </li>
+</ul>

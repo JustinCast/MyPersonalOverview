@@ -1,0 +1,21 @@
+.gists-li{
+    list-style-type: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1%
+}
+#gists-ul{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 0
+}
+#footer-ul{
+    text-align: center;
+    margin: auto;
+    padding: 0
+}
+li{
+    display: inline-block
+}
