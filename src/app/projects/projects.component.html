@@ -10,6 +10,12 @@
           <h6 class="card-title">{{r.name}}</h6>
           <!--Text-->
           <p class="card-text">{{r.description}}</p>
+          <ul id="footer-ul">
+              <li>
+                  {{r.forks}}
+                    <img src="../../assets/fork.svg" alt="Forks">
+              </li>
+          </ul>
           <button (click)="redirect(index)" class="btn btn-sm btn-go">Go</button>
       </div>
   </li>
