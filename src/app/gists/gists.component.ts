@@ -27,5 +27,8 @@ export class GistsComponent implements OnInit {
         }
       )
   }
+  redirect(index){
+    window.open(String(this.gists[index].html_url), "_blank");
+  }
 
 }
