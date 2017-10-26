@@ -6,24 +6,30 @@
 <ul id="projects-ul">
   <li class="card project-li" *ngFor="let r of repos; let index = index"> 
       <div class="card-body">
-          <!--Title-->
-          <h6 class="card-title">{{r.name}}</h6>
-          <!--Text-->
-          <p class="card-text">{{r.description}}</p>
-          <ul id="footer-ul">
-              <li>
-                  <small>
-                      {{r.forks}}
-                      <i class="fa fa-code-fork" aria-hidden="true"></i>
-                      {{r.watchers}}
-                      <i class="fa fa-eye" aria-hidden="true"></i>
-                      <span class="badge indigo">- {{r.language}} -</span>
-                      {{r.open_issues}}
-                      <i class="fa fa-bug" aria-hidden="true"></i>
-                  </small>
-              </li>
-          </ul>
-          <button (click)="redirect(index)" class="btn btn-sm btn-go">Go</button>
+        <!--Title-->
+        <h6 class="card-title">{{r.name}}</h6>
+        <!--Text-->
+        <p class="card-text">{{r.description}}</p>
+        <hr/>
+        <ul id="footer-ul">
+            <li>
+                <small>
+                    <i class="fa fa-code-fork" aria-hidden="true"></i>
+                    {{r.forks}}
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span class="badge red">{{r.language}}</span>
+                    {{r.watchers}}
+                    <i class="fa fa-bug" aria-hidden="true"></i>
+                    {{r.open_issues}}
+                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    {{r.created_at | date}}
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    {{r.updated_at | date}}
+                </small>
+            </li>
+        </ul>
+        <hr/>
+        <button (click)="redirect(index)" class="btn btn-sm btn-go">Go</button>
       </div>
   </li>
 </ul>
