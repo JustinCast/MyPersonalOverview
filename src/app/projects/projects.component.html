@@ -9,7 +9,10 @@
         <!--Title-->
         <h6 id="title" class="card-title">{{r.name}}</h6>
         <!--Text-->
-        <p class="card-text">{{r.description}}</p>
+        <small>
+            - {{r.description}}
+            <!-- <p class="card-text">{{r.description}}</p> -->
+        </small>
         <hr/>
         <ul id="footer-ul">
             <li>
@@ -30,7 +33,7 @@
             </li>
         </ul>
         <hr/>
-        <button (click)="redirect(index)" class="btn btn-sm btn-go">Go</button>
+        <button (click)="redirect(index)" class="btn btn-sm btn-go hoverable">Go</button>
       </div>
   </li>
 </ul>
