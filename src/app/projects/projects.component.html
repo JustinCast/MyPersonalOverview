@@ -2,9 +2,27 @@
     Private repositories may not appear <br>
     <small>Contact me if you want to see some</small>
 </p>
+<div style="margin: auto; text-align: center">    
+    <button style="margin: auto" mat-button (click)="switchFilters()">{{filterSwitch}}</button>
+</div>
+<div style="margin: auto; text-align: center">    
+    <mat-form-field *ngIf="primaryFilterState">
+        <mat-select placeholder="Filter repositories">
+          <mat-option *ngFor="let c of conditions" [value]="c" (click)="filterRepos(c)">{{ c }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field *ngIf="languageFilterState">
+        <mat-select placeholder="Filter Language">
+          <mat-option *ngFor="let l of allLanguages" [value]="l" (click)="displayReposByLanguage(l)">{{ l }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</div>
+  
+
 <!-- <fancy-preloader [loading]="!loading" [type]="type"></fancy-preloader> -->
 <ul id="projects-ul">
-  <li class="card project-li" *ngFor="let r of repos; let index = index"> 
+  <li class="card project-li" *ngFor="let r of reposToRender; let index = index"> 
       <div class="card-body">
         <!--Title-->
         <h6 id="title" class="card-title">{{r.name}}</h6>

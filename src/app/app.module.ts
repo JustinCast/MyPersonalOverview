@@ -14,6 +14,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { GistsComponent } from './gists/gists.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatMenuModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatIconModule } from '@angular/material';
+import { FormsModule } from "@angular/forms";
+import 'hammerjs';
 // import {NgxFancyPreloaderModule } from 'ngx-fancy-preloader';
 @NgModule({
   declarations: [
@@ -27,9 +31,18 @@ import { GistsComponent } from './gists/gists.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(ROUTES),
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatOptionModule ,
+    MatIconModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
