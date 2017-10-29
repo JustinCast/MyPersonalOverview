@@ -11,7 +11,7 @@ import { DialogService } from '../dialog/dialog.service';
 export class ProjectsComponent implements OnInit {
   repos = []
   reposToRender = []
-  link: string  
+  link: string
   loading: boolean
   languageFilterState: boolean = false
   primaryFilterState: boolean = true
@@ -32,7 +32,7 @@ export class ProjectsComponent implements OnInit {
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient, private dialog: MatDialog,
     public dialogService: DialogService,) { }
-    
+
   ngOnInit() {
     this._http.get('https://api.github.com/users/JustinCast/repos')
     .subscribe(
@@ -50,11 +50,11 @@ export class ProjectsComponent implements OnInit {
     )
     this.loading = false
     this.repos = this.reposToRender
-    console.log('REPOS')
-    console.log(this.repos)
-      
+    // console.log('REPOS')
+    // console.log(this.repos)
+
   }
-  
+
 
   chargeAllLanguages(){
     for (var index = 0; index < this.repos.length; index++) {
@@ -79,7 +79,7 @@ export class ProjectsComponent implements OnInit {
       case "Most Forked":
         this.getMostForkedRepo()
         break
-    
+
       default:
         break;
     }
@@ -100,7 +100,7 @@ export class ProjectsComponent implements OnInit {
         this.primaryFilterState = false
         this.filterSwitch = "Show Filters"
         break
-    
+
       case "Show Filters":
         this.primaryFilterState = true
         this.filterSwitch = "Hide filters"
