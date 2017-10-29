@@ -15,12 +15,15 @@ export class ProjectsComponent implements OnInit {
   primaryFilterState: boolean = true
   allLanguages: Array<any> = []
   filterSwitch = "Hide filters"
+  mostForkedCount: number // esto es para comparacion (saber cual es el repo con más forks)
+  mostForkedRepo: any // esto es para localizar el repo que tenga mas forks
+  mostPopularCount: number // para comparar el repo más seguido
+  mostPopularRepo: any // para obtener el repo más seguido
+
   conditions = [
     "By Language",
     "Most Popular",
     "Most Forked",
-    "Most cloned",
-    "Most watchers"
   ]
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient) { }
@@ -42,8 +45,8 @@ export class ProjectsComponent implements OnInit {
       )
       this.loading = false
       this.repos = this.reposToRender
-      // console.log('REPOS')
-      // console.log(this.repos)
+      console.log('REPOS')
+      console.log(this.repos)
   }
 
   chargeAllLenguages(){
@@ -64,13 +67,11 @@ export class ProjectsComponent implements OnInit {
         this.languageFilterState = true
         break
       case "Most Popular":
+        this.getMostPopularRepo()
         break
       case "Most Forked":
+      this.getMostForkedRepo()
         break
-      case "Most cloned":
-        break
-      case "Most watchers":
-        break;
     
       default:
         break;
@@ -101,5 +102,34 @@ export class ProjectsComponent implements OnInit {
       default:
         break;
     }
+  }
+  getMostForkedRepo() {
+    this.mostForkedCount = 0
+    this.reposToRender = this.repos
+    this.reposToRender.forEach(r => {
+      if(this.mostForkedCount < r.forks){
+        this.mostForkedCount = r.forks
+        this.mostForkedRepo = r
+      }
+    })
+    this.reposToRender = []
+    this.reposToRender.unshift(this.mostForkedRepo)
+  }
+  getMostPopularRepo() {
+    this.mostPopularCount = 0
+    this.reposToRender = this.repos
+    this.reposToRender.forEach(r => {
+      if(this.mostPopularCount < r.watchers){
+        this.mostPopularCount = r.watchers
+        this.mostPopularRepo = r
+      }
+    })
+    this.reposToRender = []
+    if(this.mostPopularCount === 0){
+      this.reposToRender = this.repos
+      alert('So far there are no repositories followed')
+      return
+    }
+    this.reposToRender.unshift(this.mostPopularRepo)
   }
 }
