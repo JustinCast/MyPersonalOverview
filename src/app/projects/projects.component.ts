@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material'
 import { DialogService } from '../dialog/dialog.service';
@@ -21,7 +21,8 @@ export class ProjectsComponent implements OnInit {
   mostForkedRepo: any // esto es para localizar el repo que tenga mas forks
   mostPopularCount: number // para comparar el repo más seguido
   mostPopularRepo: any // para obtener el repo más seguido
-
+  prevValue: number = 0 // esto es para el paginator
+  nextValue: number = 5 // esto es para el paginator
   conditions = [
     "By Language",
     "Most Popular",
@@ -31,29 +32,31 @@ export class ProjectsComponent implements OnInit {
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient, private dialog: MatDialog,
     public dialogService: DialogService,) { }
-
+    
   ngOnInit() {
     this._http.get('https://api.github.com/users/JustinCast/repos')
-      .subscribe(
-        data => {
-          this.loading = true
-          for(let key in data){
-            if(data.hasOwnProperty(key)){
-              this.reposToRender.push(data[key])
-            }
+    .subscribe(
+      data => {
+        this.loading = true
+        for(let key in data){
+          if(data.hasOwnProperty(key)){
+            this.reposToRender.push(data[key])
           }
-        },
-        err =>{
-          console.log(err)
         }
-      )
-      this.loading = false
-      this.repos = this.reposToRender
-      console.log('REPOS')
-      console.log(this.repos)
+      },
+      err =>{
+        console.log(err)
+      }
+    )
+    this.loading = false
+    this.repos = this.reposToRender
+    console.log('REPOS')
+    console.log(this.repos)
+      
   }
+  
 
-  chargeAllLenguages(){
+  chargeAllLanguages(){
     for (var index = 0; index < this.repos.length; index++) {
       if((!this.allLanguages.includes(this.repos[index].language)) && (this.repos[index].language !== null))
         this.allLanguages.unshift(this.repos[index].language)
@@ -67,7 +70,7 @@ export class ProjectsComponent implements OnInit {
   filterRepos(c){
     switch (c) {
       case "By Language":
-        this.chargeAllLenguages()
+        this.chargeAllLanguages()
         this.languageFilterState = true
         break
       case "Most Popular":
@@ -139,7 +142,7 @@ export class ProjectsComponent implements OnInit {
 
   openDialog(): void {
     this.dialogService
-    .confirm('Ha ocurrido un error', 'No existen datos para este filtro')
+    .confirm('There is not enough data', 'Let me add a little experience, and I will notice you')
     .subscribe(res => this.result = res);
   }
 }

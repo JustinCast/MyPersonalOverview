@@ -3,7 +3,7 @@
     <small>Contact me if you want to see some</small>
 </p>
 <div style="margin: auto; text-align: center">    
-    <button style="margin: auto" mat-button (click)="switchFilters()">{{filterSwitch}}</button>
+    <button id="filter-btn" mat-button (click)="switchFilters()"><i class="fa fa-filter" aria-hidden="true"></i></button>
 </div>
 <div style="margin: auto; text-align: center">    
     <mat-form-field *ngIf="primaryFilterState">
