@@ -15,9 +15,18 @@ import { HttpClientModule } from "@angular/common/http";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { GistsComponent } from './gists/gists.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatMenuModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatIconModule } from '@angular/material';
+import { MatMenuModule, 
+  MatButtonModule, 
+  MatFormFieldModule, 
+  MatSelectModule, 
+  MatOptionModule, 
+  MatIconModule ,
+  MatDialogModule
+} from '@angular/material';
 import { FormsModule } from "@angular/forms";
 import 'hammerjs';
+import { DialogComponent } from './dialog/dialog.component';
+import { DialogService } from './dialog/dialog.service';
 // import {NgxFancyPreloaderModule } from 'ngx-fancy-preloader';
 @NgModule({
   declarations: [
@@ -27,7 +36,8 @@ import 'hammerjs';
     ErrorHandleComponent,
     ProjectsComponent,
     PortfolioComponent,
-    GistsComponent
+    GistsComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,10 +52,14 @@ import 'hammerjs';
     MatSelectModule,
     MatFormFieldModule,
     MatOptionModule ,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [DialogService],
+  entryComponents: [
+    DialogComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material'
+import { DialogService } from '../dialog/dialog.service';
 // import { FancyPreloaderTypes } from 'ngx-fancy-preloader';
 @Component({
   selector: 'app-projects',
@@ -25,8 +27,10 @@ export class ProjectsComponent implements OnInit {
     "Most Popular",
     "Most Forked",
   ]
+  public result: any
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private dialog: MatDialog,
+    public dialogService: DialogService,) { }
 
   ngOnInit() {
     this._http.get('https://api.github.com/users/JustinCast/repos')
@@ -70,7 +74,7 @@ export class ProjectsComponent implements OnInit {
         this.getMostPopularRepo()
         break
       case "Most Forked":
-      this.getMostForkedRepo()
+        this.getMostForkedRepo()
         break
     
       default:
@@ -127,9 +131,15 @@ export class ProjectsComponent implements OnInit {
     this.reposToRender = []
     if(this.mostPopularCount === 0){
       this.reposToRender = this.repos
-      alert('So far there are no repositories followed')
+      this.openDialog()
       return
     }
     this.reposToRender.unshift(this.mostPopularRepo)
+  }
+
+  openDialog(): void {
+    this.dialogService
+    .confirm('Ha ocurrido un error', 'No existen datos para este filtro')
+    .subscribe(res => this.result = res);
   }
 }
