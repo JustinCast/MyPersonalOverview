@@ -38,3 +38,6 @@ li{
 #filter-btn{
     margin: auto; font-size: 20px
 }
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #3F51B5;
+  }

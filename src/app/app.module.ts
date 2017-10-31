@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { GistsComponent } from './gists/gists.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgxPaginationModule } from 'ngx-pagination'
 import { MatMenuModule, 
   MatButtonModule, 
   MatFormFieldModule, 
@@ -53,7 +54,8 @@ import { DialogService } from './dialog/dialog.service';
     MatFormFieldModule,
     MatOptionModule ,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxPaginationModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [DialogService],
