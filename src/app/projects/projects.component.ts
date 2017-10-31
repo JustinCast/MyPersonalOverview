@@ -29,6 +29,7 @@ export class ProjectsComponent implements OnInit {
     "Most Forked",
   ]
   public result: any
+  p: any
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
   constructor(private _http: HttpClient, private dialog: MatDialog,
     public dialogService: DialogService,) { }
