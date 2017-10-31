@@ -22,7 +22,7 @@
 
 <!-- <fancy-preloader [loading]="!loading" [type]="type"></fancy-preloader> -->
 <ul id="projects-ul">
-  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 5, currentPage: p } ; let index = index"> 
+  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 5, currentPage: r } ; let index = index"> 
       <div class="card-body">
         <!--Title-->
         <h6 id="title" class="card-title">{{r.name}}</h6>
@@ -56,4 +56,4 @@
   </li>
 </ul>
 
-<pagination-controls class="my-pagination" style="text-align: center" (pageChange)="p=$event"></pagination-controls>
+<pagination-controls class="my-pagination" style="text-align: center" (pageChange)="r=$event"></pagination-controls>
