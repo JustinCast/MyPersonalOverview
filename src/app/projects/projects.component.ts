@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material'
 import { DialogService } from '../dialog/dialog.service';
@@ -8,7 +8,7 @@ import { DialogService } from '../dialog/dialog.service';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit, AfterViewInit {
   repos = []
   reposToRender = []
   link: string
@@ -56,6 +56,17 @@ export class ProjectsComponent implements OnInit {
 
   }
 
+  ngAfterViewInit() {
+    /**
+     * lo siguiente es necesario para quitar el padding por defecto que trae la libreria para paginació
+     */ 
+    let style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = '.zero-padding { padding: 0; }';
+    document.getElementsByTagName('head')[0].appendChild(style);
+    let ul = document.getElementsByClassName("ngx-pagination")
+    ul[0].classList.add('zero-padding')
+  }
 
   chargeAllLanguages(){
     for (var index = 0; index < this.repos.length; index++) {

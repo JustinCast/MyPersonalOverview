@@ -14,7 +14,7 @@
 #private-repos{
     text-align: center;
     color: #311B92;
-    font-size: 25px
+    font-size: 15px
 }
 #contact-me{
     margin: auto
@@ -40,4 +40,10 @@ li{
 }
 .my-pagination /deep/ .ngx-pagination .current {
     background: #3F51B5;
-  }
+}.my-pagination > * {
+    padding: 0
+}
+
+ul{
+    padding: 0
+}
