@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 // Manual imports
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RouterModule } from "@angular/router";
-import { ROUTES } from './app.routing';
 import { OverviewComponent } from './overview/overview.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorHandleComponent } from './error-handle/error-handle.component';
@@ -28,7 +27,7 @@ import { FormsModule } from "@angular/forms";
 import 'hammerjs';
 import { DialogComponent } from './dialog/dialog.component';
 import { DialogService } from './dialog/dialog.service';
-// import {NgxFancyPreloaderModule } from 'ngx-fancy-preloader';
+import { ROUTES } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +54,7 @@ import { DialogService } from './dialog/dialog.service';
     MatOptionModule ,
     MatIconModule,
     MatDialogModule,
-    NgxPaginationModule
+    NgxPaginationModule, 
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [DialogService],

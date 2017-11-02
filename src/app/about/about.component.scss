@@ -1,6 +1,6 @@
 img{
-    display: block;
-    margin: auto;
+    display: inline-block;
+    text-align: center
 }
 div.card{
     text-align: center;
@@ -9,15 +9,15 @@ div.card{
     margin-top: 2%;
 }
 #links-list{
-    margin: auto;
-    width: 50%;
-    margin-left: 25%;
-    display: inline-block;
-    text-align: center
+    width: 100%;
+    list-style-type: none;
+    margin-top: 2%;
+    padding: 0;
+    text-align: center;
 }
 .links{
     width: 5%;
-    display: inline-block
+    display: inline-block;
 }
 #languages-container{
     display: flex;
