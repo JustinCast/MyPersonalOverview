@@ -13,5 +13,4 @@ export const environment = {
     storageBucket: "justin-overview.appspot.com",
     messagingSenderId: "172144790388"
   }
-
 };
