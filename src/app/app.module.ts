@@ -21,13 +21,19 @@ import { MatMenuModule,
   MatSelectModule, 
   MatOptionModule, 
   MatIconModule ,
-  MatDialogModule
+  MatDialogModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { FormsModule } from "@angular/forms";
 import 'hammerjs';
 import { DialogComponent } from './dialog/dialog.component';
 import { DialogService } from './dialog/dialog.service';
 import { ROUTES } from './app.routing';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { AuthService } from './auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,16 +54,19 @@ import { ROUTES } from './app.routing';
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
+    MatSnackBarModule,
     MatMenuModule,
     MatSelectModule,
     MatFormFieldModule,
     MatOptionModule ,
     MatIconModule,
     MatDialogModule,
-    NgxPaginationModule, 
+    NgxPaginationModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule 
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [DialogService],
+  providers: [DialogService, AuthService],
   entryComponents: [
     DialogComponent,
   ],

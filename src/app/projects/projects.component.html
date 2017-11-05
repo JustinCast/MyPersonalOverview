@@ -2,8 +2,8 @@
     Private repositories may not appear <br>
     <small>Contact me if you want to see some</small>
 </p>
-<div style="margin: auto; text-align: center">    
-    <button id="filter-btn" mat-button (click)="switchFilters()"><i class="fa fa-filter" aria-hidden="true"></i></button>
+<div style="margin: auto; margin-top: 0; text-align: center">    
+    <button id="filter-btn" mat-button (click)="switchFilters()">{{filterSwitch}}</button>
 </div>
 <div style="margin: auto; text-align: center">    
     <mat-form-field *ngIf="primaryFilterState">
@@ -22,12 +22,12 @@
 
 <!-- <fancy-preloader [loading]="!loading" [type]="type"></fancy-preloader> -->
 <ul id="projects-ul">
-  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 5, currentPage: p } ; let index = index"> 
+  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 4, currentPage: p } ; let index = index"> 
       <div class="card-body">
         <!--Title-->
         <h6 id="title" class="card-title">{{r.name}}</h6>
         <!--Text-->
-        <small>
+        <small style="font-size: 13px">
             - {{r.description}}
             <!-- <p class="card-text">{{r.description}}</p> -->
         </small>

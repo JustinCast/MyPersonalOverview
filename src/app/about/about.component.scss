@@ -19,16 +19,6 @@ div.card{
     width: 5%;
     display: inline-block;
 }
-#languages-container{
-    display: flex;
-    justify-content: center;
-    margin: auto
-}
-.languages-li{
-    list-style-type: none;
-    font-size: 25px;
-    margin-left: 1%
-}
 #about-title{
     text-align: center; 
     margin: auto; 
@@ -38,5 +28,9 @@ div.card{
 }
 #sendme-container{
     text-align: center;
-    width: 40%
+    width: 70%;
+    padding: 1%
+}
+li {
+    list-style-type: none
 }
