@@ -34,6 +34,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthService } from './auth.service';
+import { HireMeComponent } from './hire-me/hire-me.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { AuthService } from './auth.service';
     ProjectsComponent,
     PortfolioComponent,
     GistsComponent,
-    DialogComponent
+    DialogComponent,
+    HireMeComponent
   ],
   imports: [
     BrowserModule,
