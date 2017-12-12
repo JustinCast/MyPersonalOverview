@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from "@angular/material";
 
 @Component({
   selector: 'app-hire-me',
@@ -6,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hire-me.component.scss']
 })
 export class HireMeComponent implements OnInit {
-
-  constructor() { }
-
+  public title: string
+  public message: string
+  
+  constructor(public dialogRef: MatDialogRef<HireMeComponent>) { }
   ngOnInit() {
   }
 

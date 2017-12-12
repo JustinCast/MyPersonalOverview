@@ -35,6 +35,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AuthService } from './auth.service';
 import { HireMeComponent } from './hire-me/hire-me.component';
+import { HireMeDialogService } from './hire-me/hire-me-dialog.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,9 +69,10 @@ import { HireMeComponent } from './hire-me/hire-me.component';
     AngularFireAuthModule 
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [DialogService, AuthService],
+  providers: [DialogService, AuthService, HireMeDialogService],
   entryComponents: [
     DialogComponent,
+    HireMeComponent
   ],
   bootstrap: [AppComponent]
 })

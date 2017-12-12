@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   public result: any
   p: any
   // type: string = FancyPreloaderTypes.EVIL_NORMAL
-  constructor(private _http: HttpClient, private dialog: MatDialog,
+  constructor(private _http: HttpClient,
     public dialogService: DialogService,) { }
 
   ngOnInit() {

@@ -12,7 +12,7 @@ export class DialogService {
     dialogRef = this.dialog.open(DialogComponent, {
         width: '250px',
         data: { name: 'Ups!' }
-    });
+    }); 
     dialogRef.componentInstance.title = title
     dialogRef.componentInstance.message = message
 
