@@ -12,5 +12,6 @@ export const environment = {
     projectId: "justin-overview",
     storageBucket: "justin-overview.appspot.com",
     messagingSenderId: "172144790388"
-  }
+  },
+  sendGridAPI_KEY: "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"
 };
