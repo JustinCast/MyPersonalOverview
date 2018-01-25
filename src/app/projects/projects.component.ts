@@ -75,8 +75,8 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  redirect(index){
-    window.open(String(this.repos[index].html_url), "_blank");
+  redirect(r){
+    window.open(String(r.html_url), "_blank");
   }
 
   filterRepos(c){

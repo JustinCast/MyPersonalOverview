@@ -22,7 +22,7 @@
 
 <!-- <fancy-preloader [loading]="!loading" [type]="type"></fancy-preloader> -->
 <ul id="projects-ul">
-  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 4, currentPage: p } ; let index = index"> 
+  <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 4, currentPage: p } ; let i = index"> 
       <div class="card-body">
         <!--Title-->
         <h6 id="title" class="card-title">{{r.name}}</h6>
@@ -51,7 +51,7 @@
             </li>
         </ul>
         <hr/>
-        <button (click)="redirect(index)" class="btn btn-sm btn-go hoverable">Go</button>
+        <button (click)="redirect(r)" class="btn btn-sm btn-go hoverable">Go</button>
       </div>
   </li>
 </ul>
