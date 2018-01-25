@@ -25,26 +25,30 @@
   <li class="card project-li" *ngFor="let r of reposToRender | paginate: { itemsPerPage: 4, currentPage: p } ; let i = index"> 
       <div class="card-body">
         <!--Title-->
-        <h6 id="title" class="card-title">{{r.name}}</h6>
+        <h4 id="title" class="card-title">{{r.name}}</h4>
         <!--Text-->
-        <small style="font-size: 13px">
+        <small style="font-size: 15px">
             - {{r.description}}
             <!-- <p class="card-text">{{r.description}}</p> -->
         </small>
         <hr/>
         <ul id="footer-ul">
             <li>
-                <small>
+                <small style="font-size: 12px">
                     <i class="fa fa-code-fork" aria-hidden="true"></i>
                     {{r.forks}}
+                    |
                     <i class="fa fa-eye" aria-hidden="true"></i>
                     {{r.watchers}}
+                    |
                     <span class="badge red">{{r.language}}</span>
+                    |
                     <i class="fa fa-bug" aria-hidden="true"></i>
                     {{r.open_issues}}
                     <br>
                     <i class="fa fa-calendar-o" aria-hidden="true"></i>
                     {{r.created_at | date}}
+                    |
                     <i class="fa fa-bolt" aria-hidden="true"></i>
                     {{r.pushed_at | date}}
                 </small>
