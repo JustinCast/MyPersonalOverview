@@ -7,6 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class PortfolioComponent implements OnInit, OnDestroy {
   result: any;
   isCollapsed
+  actualYear = (new Date()).getFullYear()
   constructor() { }
   
   ngOnInit() {
